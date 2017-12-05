@@ -109,7 +109,7 @@ const s = StyleSheet.create({
     imageFront: require('../images/card-front.png'),
     imageBack: require('../images/card-back.png'),
 
-    cardTextColor: 'rga(255, 255, 255, 1)',
+    cardTextColor: 'rgba(255, 255, 255, 1)',
   };
 
   render() {
@@ -157,7 +157,7 @@ const s = StyleSheet.create({
                 s.baseText,
                 {fontFamily},
                 s.number,
-                {cardTextColor},
+                {color: cardTextColor},
                 !number && s.placeholder,
                 focused === 'number' && s.focused,
               ]}>
@@ -168,7 +168,7 @@ const s = StyleSheet.create({
                 s.baseText,
                 {fontFamily},
                 s.name,
-                {cardTextColor},
+                {color: cardTextColor},
                 !name && s.placeholder,
                 focused === 'name' && s.focused,
               ]}
@@ -181,7 +181,7 @@ const s = StyleSheet.create({
                 {fontFamily},
                 s.expiryLabel,
                 s.placeholder,
-                {cardTextColor},
+                {color: cardTextColor},
                 focused === 'expiry' && s.focused,
               ]}>
               MONTH/YEAR
@@ -191,7 +191,7 @@ const s = StyleSheet.create({
                 s.baseText,
                 {fontFamily},
                 s.expiry,
-                {cardTextColor},
+                {color: cardTextColor},
                 !expiry && s.placeholder,
                 focused === 'expiry' && s.focused,
               ]}>
@@ -203,7 +203,7 @@ const s = StyleSheet.create({
                   s.baseText,
                   {fontFamily},
                   s.amexCVC,
-                  {cardTextColor},
+                  {color: cardTextColor},
                   !cvc && s.placeholder,
                   focused === 'cvc' && s.focused,
                 ]}>
@@ -218,7 +218,7 @@ const s = StyleSheet.create({
               style={[
                 s.baseText,
                 s.cvc,
-                {cardTextColor},
+                {color: cardTextColor},
                 !cvc && s.placeholder,
                 focused === 'cvc' && s.focused,
               ]}>
