@@ -34,7 +34,7 @@ const s = StyleSheet.create({
   },
   focused: {
     fontWeight: 'bold',
-    color: 'rgba(0, 0, 0, 1)',
+    color: 'rgba(0, 0, 0, 0.8)',
   },
   number: {
     fontSize: 21,
@@ -109,7 +109,7 @@ const s = StyleSheet.create({
     imageFront: require('../images/card-front.png'),
     imageBack: require('../images/card-back.png'),
 
-    cardTextColor: 'rgba(255, 255, 255, 1)',
+    cardTextColor: 'rgba(0, 0, 0, 0.8)',
   };
 
   render() {
