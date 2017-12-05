@@ -91,6 +91,8 @@ const s = StyleSheet.create({
     imageFront: PropTypes.number,
     imageBack: PropTypes.number,
     customIcons: PropTypes.object,
+
+    cardTextColor: PropTypes.string,
   };
 
   static defaultProps = {
@@ -106,6 +108,8 @@ const s = StyleSheet.create({
     fontFamily: Platform.select({ios: 'Courier', android: 'monospace'}),
     imageFront: require('../images/card-front.png'),
     imageBack: require('../images/card-back.png'),
+
+    cardTextColor: 'rga(255, 255, 255, 1)',
   };
 
   render() {
@@ -122,6 +126,7 @@ const s = StyleSheet.create({
       imageBack,
       scale,
       fontFamily,
+      cardTextColor,
     } = this.props;
 
     const Icons = {...defaultIcons, ...customIcons};
@@ -152,6 +157,7 @@ const s = StyleSheet.create({
                 s.baseText,
                 {fontFamily},
                 s.number,
+                {cardTextColor},
                 !number && s.placeholder,
                 focused === 'number' && s.focused,
               ]}>
@@ -162,6 +168,7 @@ const s = StyleSheet.create({
                 s.baseText,
                 {fontFamily},
                 s.name,
+                {cardTextColor},
                 !name && s.placeholder,
                 focused === 'name' && s.focused,
               ]}
@@ -174,6 +181,7 @@ const s = StyleSheet.create({
                 {fontFamily},
                 s.expiryLabel,
                 s.placeholder,
+                {cardTextColor},
                 focused === 'expiry' && s.focused,
               ]}>
               MONTH/YEAR
@@ -183,6 +191,7 @@ const s = StyleSheet.create({
                 s.baseText,
                 {fontFamily},
                 s.expiry,
+                {cardTextColor},
                 !expiry && s.placeholder,
                 focused === 'expiry' && s.focused,
               ]}>
@@ -194,6 +203,7 @@ const s = StyleSheet.create({
                   s.baseText,
                   {fontFamily},
                   s.amexCVC,
+                  {cardTextColor},
                   !cvc && s.placeholder,
                   focused === 'cvc' && s.focused,
                 ]}>
@@ -208,6 +218,7 @@ const s = StyleSheet.create({
               style={[
                 s.baseText,
                 s.cvc,
+                {cardTextColor},
                 !cvc && s.placeholder,
                 focused === 'cvc' && s.focused,
               ]}>
